@@ -61,6 +61,9 @@ nav a{
     background-color: #fff;
     color: #000000;
 }
+.respo {
+    display: none;
+}
 
 header{
     height: 430px;
@@ -69,53 +72,37 @@ header{
     justify-content: space-around;
     align-items: center;
     background-color: #dadbf1;
-    padding: 9em 30%;
+    padding: 9em 20%;
 }
 header h2{
     font-size: 80px;
     font-weight: 400;
-
+    margin-bottom: 20px;
+}
+.search-container{
+    width: 100%;
+    padding: 0;
+}
+input[type=text]{
+    padding: 30px 20px;
+    width: 100%;
+    border: 1px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+input[type=text]:hover{
+    border: 1px solid #4C5FD5;
 }
 form{
-    color: #555;
     display: flex;
-    padding: 2px;
-    border: 1px solid currentColor;
-    border-radius: 5px;
+    align-items: center;
 }
-.search-container input[type=text]{
-    /* width: 100%; */
-    /* padding: 6px;
-    margin-top: 8px;
-    font-size: 17px; */
-    border: none;
-    background: #fff;
-    margin: 0;
-    padding: 7px 8px;
-    font-size: 14px;
-    color: inherit;
-    border: 1px solid transparent;
-    border-radius: inherit;
+form a{
+    position: relative;
+    left: -35px;
+    font-size: 25px;
+    font-weight: 300;
 }
-input[type="search"]::placeholder {
-    color: #bbb;
-  }
-  button[type="text"] {
-    text-indent: -999px;
-    overflow: hidden;
-    width: 40px;
-    padding: 0;
-    margin: 0;
-    border-radius: inherit;
-    background: transparent;
-    cursor: pointer;
-    opacity: 0.7;
-  }
-  
-  button[type="text"]:hover {
-    opacity: 1;
-  }
-
 .main{
     margin: 5% 10%;
     padding: 5% auto;
@@ -130,13 +117,18 @@ input[type="search"]::placeholder {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    align-items: center;
+    align-items: space-between;
 }
 .main .content{
     /* margin-left: 50px; */
     margin-right: 50px;
     font-size: 25px;
     line-height: 3.5em;
+}
+.content h3{
+    font-size: 23px;
+    line-height: 1.2em;
+    margin-bottom: 15px;
 }
 .content a{
     text-decoration: none;
@@ -202,4 +194,84 @@ footer a{
     padding: 1px 8px;
     border: 2px solid #fff;
     border-radius: 50%;
+}
+
+
+/*responsive*/
+@media screen and (max-width: 1070px) {
+    header h2{
+        font-size: 60px;
+    }
+    .col-5 h3{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 899px){
+    footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .col-5{
+        align-self: flex-start;
+        margin-top: 30px;
+    }
+    header h2{
+        font-size: 50px;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .main img{
+        max-width: 50%;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width: 863px) {
+    .register{
+        display: none;
+    }
+    header h2{
+        font-size: 40px;
+    }
+    .respo{
+        display: inline;
+    }
+    .respo i{
+        margin: 0 5px;
+    }
+}
+@media screen and (max-width: 536px){
+    header h2{
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+}
+@media screen and (max-width: 434px){
+    .logo a:nth-child(2){
+        font-size: 14px;
+    }
+    .logo a:nth-child(3){
+        font-size: 23px;
+    }
+    input[type=text]{
+        padding: 15px 10px;
+        font-size: 15px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 402px){
+    header{
+        height: 350px;
+    }
+    header h2{
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    input[type=text]{
+        padding: 10px 5px;
+        font-size: 10px;
+        width: 100%;
+    }
 }
